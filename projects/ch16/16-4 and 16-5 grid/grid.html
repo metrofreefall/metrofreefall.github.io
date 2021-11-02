@@ -23,9 +23,35 @@ body {
 #layout {
   margin-left: 5%;
   margin-right: 5%;
-	
+  display: grid;
+  grid-template-rows: 3em 20px [main-start] 150px auto 5em [main-end];
+  grid-template-columns:  [main-start] 1fr [main-end] repeat(3, 20px 150px); 
 }
-
+nav {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 8;
+} 
+#figA {
+  grid-area: 3 / 3 / 4 / 4;
+}
+#figB {
+  grid-area: 3 / 5 / 4 / 6;
+}
+#figC {
+  grid-row: 3 / 4;
+  grid-column: span 1 / -1;
+}
+main {
+/*  grid-row: main-start / main-end;
+  grid-column: main-start / main-end; */
+  grid-area: main;
+}
+footer { 
+  grid-row: 5 / 6;
+  grid-column: 3 / -1;
+  } 
 
 
 /* VISUAL STYLES START HERE */
@@ -90,7 +116,7 @@ main {
 
 figure {
   margin: 0;
-  padding: 0;'
+  padding: 0;
    /* clears browser styles for figures */
 }
 
@@ -117,12 +143,12 @@ footer {
 </nav>  
 
 <main>
-  <h2>Introducing: Breads of the World!</h2>
-  <p>It seems as though every region of the world has its own special take on this staple of humankind. From crusty french baguettes to table-sized Afghan flat-breads, breads can come in all shapes, sizes, and textures.</p>
-  <p>Each month, we feature a bread that is the specialty of a particular culture or part of the world. Some will be made in-house by our bakers who travel around the world learning regional techniques in order to bring them back for you to try. Other breads will be provided by local bakeries that have been making bread for their communities for generations.</p>
+<h2>Introducing: Breads of the World!</h2>
+<p>It seems as though every region of the world has its own special take on this staple of humankind. From crusty french baguettes to table-sized Afghan flat-breads, breads can come in all shapes, sizes, and textures.</p>
+<p>Each month, we feature a bread that is the specialty of a particular culture or part of the world. Some will be made in-house by our bakers who travel around the world learning regional techniques in order to bring them back for you to try. Other breads will be provided by local bakeries that have been making bread for their communities for generations.</p>
 
-  <p>When you are in the bakery, we encourage you to give our featured Bread of the World a try. If you can't make it to the shop, many of our breads will be available for purchase online.</p>
-  <p>Providing you with fresh, unique breads is one of the things that makes Black Goose Bakery proud.</p>
+<p>When you are in the bakery, we encourage you to give our featured Bread of the World a try. If you can't make it to the shop, many of our breads will be available for purchase online.</p>
+<p>Providing you with fresh, unique breads is one of the things that makes Black Goose Bakery proud.</p>
 <!--
 <p>Our breads are made daily from highest-quality whole grain flour, water, salt, and yeast or sourdough starter. Simply and naturally, and never any preservatives. Patience is key to achieving the proper level of fermentation and baking each loaf to perfection. Available in whole grain, sourdough, olive loaf, classic rye, and potato-onion.</p>
 -->
@@ -133,12 +159,13 @@ footer {
 <figure id="figC"><img src="images/braided_150.jpg"></figure>
 
 <footer>
-  <p><strong>Black Goose Bakery</strong> | Seekonk, MA <br>
+<p><strong>Black Goose Bakery</strong> | Seekonk, MA <br>
 Monday &ndash; Friday: 5am to 3pm | Saturday &amp; Sunday: 6am to 4pm</p>
 </footer>
 
 </div>
 </body>
 </html>
+
 
 
